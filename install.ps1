@@ -17,7 +17,7 @@ $apps = @(
 )
 
 foreach ($app in $apps) {
-    winget install --id $app.Id --silent --accept-package-agreements --accept-source-agreements
+    winget install --id $app --silent --accept-package-agreements --accept-source-agreements
 }
 
-Set-ItemProperty -Path HKCU:SOFTWAREMicrosoftWindowsCurrentVersionThemesPersonalize -Name AppsUseLightTheme -Value 0
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" -Name AppsUseLightTheme -Value 0
